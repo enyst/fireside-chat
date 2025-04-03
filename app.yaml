@@ -9,3 +9,13 @@ handlers:
 # Route all other requests to the FastAPI app
 - url: /.*
   script: auto
+
+# Instance class (controls performance/cost)
+# F1 is the smallest
+instance_class: F1
+
+# Basic scaling
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 60m
+
