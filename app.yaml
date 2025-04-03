@@ -1,0 +1,11 @@
+runtime: python312
+entrypoint: uvicorn fireside.main:app --host 0.0.0.0 --port $PORT
+
+handlers:
+# Serve static files from the 'static' directory
+- url: /static
+  static_dir: static
+
+# Route all other requests to the FastAPI app
+- url: /.*
+  script: auto
