@@ -19,3 +19,18 @@ automatic_scaling:
   min_instances: 0
   max_instances: 1
 
+# Environment variables available to the application instances.
+# Standard environment variables for Google Cloud services and genai SDK Vertex AI config.
+env_variables:
+  # Replace with your actual Google Cloud Project ID
+  GOOGLE_CLOUD_PROJECT: "your-gcp-project-id"
+
+  # Replace with the region for your Vertex AI resources (e.g., us-central1)
+  GOOGLE_CLOUD_LOCATION: "us-central1"
+
+  # Explicitly tell the google-generativeai SDK to use Vertex AI backend and ADC
+  GOOGLE_GENAI_USE_VERTEXAI: "True" # Use string "True" for env vars
+
+  # Optional: Override the default model used in vertex_ai.py
+  # Ensure this model is available in your project/location.
+  # VERTEX_MODEL_ID: "gemini-1.5-pro-latest" # Keep this if you want to override the default in code

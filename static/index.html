@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fireside App</title>
-    <link rel="stylesheet" href="/static/style.css"> <!-- Example link, though style.css doesn't exist yet -->
+    <title>Fireside Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Hello!</h1>
-    <p>This is a simple application.</p>
-    <p>Try the <a href="/hello">/hello</a> endpoint.</p>
+    <div id="app-container">
+        <!-- History Panel -->
+        <aside id="history-panel">
+            <h2>History</h2>
+            <button id="new-chat-button">New Chat</button>
+            <ul id="history-list">
+                <!-- History items will be loaded here by JS -->
+                <li>Loading history...</li>
+            </ul>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main id="chat-area">
+            <div id="chat-output">
+                <!-- Messages will appear here -->
+                <div class="message model"><strong>Model:</strong> Welcome to Fireside Chat!</div>
+            </div>
+            <div id="input-area">
+                <textarea id="prompt-input" placeholder="Enter your prompt here..." rows="3"></textarea>
+                <button id="send-button">Send</button>
+            </div>
+        </main>
+
+        <!-- Settings Panel -->
+        <!-- <aside id="settings-panel">
+            <h2>Settings</h2>
+            <! -- Settings form elements go here -- >
+        </aside> -->
+    </div>
+
+    <!-- Link to JavaScript file (will be created next) -->
+    <script src="/static/script.js"></script>
 </body>
 </html>
